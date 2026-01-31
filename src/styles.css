@@ -1,0 +1,132 @@
+:root {
+    --black: #000;
+    --white: #fff;
+    --muted: #f4f4f4
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Segoe UI, Arial, Helvetica, sans-serif
+}
+
+.container {
+    max-width: 1100px;
+    margin: 24px auto;
+    padding: 0 12px
+}
+
+h1 {
+    margin-bottom: 12px
+}
+
+.controls {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 12px
+}
+
+input#search {
+    padding: 8px 10px;
+    min-width: 220px;
+    border: 1px solid #ccc;
+    border-radius: 4px
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse
+}
+
+thead th {
+    background: #222;
+    color: #fff;
+    padding: 8px;
+    text-align: left;
+    position: relative
+}
+
+tbody td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    vertical-align: middle
+}
+
+tbody tr:nth-child(odd) {
+    background: var(--white);
+    color: var(--black)
+}
+
+tbody tr:nth-child(even) {
+    background: var(--black);
+    color: var(--white)
+}
+
+tbody tr:hover {
+    outline: 2px solid #2b7cff
+}
+
+img.product-img {
+    width: 160px;
+    height: auto;
+    max-height: 120px;
+    object-fit: contain;
+    display: block;
+}
+
+.sort-btn {
+    margin-left: 6px;
+    padding: 2px 6px;
+    cursor: pointer
+}
+
+.pagination {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px
+}
+
+select {
+    padding: 6px;
+    border-radius: 4px
+}
+
+.desc-col {
+    display: table-cell;
+    max-width: 420px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: inherit;
+}
+
+td.desc-col:hover{
+    white-space: normal;
+}
+
+.tooltip {
+    position: fixed;
+    pointer-events: none;
+    background: #111;
+    color: #fff;
+    padding: 8px;
+    border-radius: 6px;
+    max-width: 320px;
+    display: none;
+    z-index: 999;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .3)
+}
+
+@media (max-width:700px) {
+    img.product-img {
+        width: 72px;
+        height: 60px
+    }
+
+    thead th:nth-child(5),
+    thead th:nth-child(6) {
+        display: none
+    }
+}

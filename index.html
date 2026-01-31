@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard - Products</title>
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Products Dashboard</h1>
+
+    <div class="controls">
+      <input id="search" placeholder="Search title..." />
+      <label>Rows:
+        <select id="perPage">
+          <option value="5">5</option>
+          <option value="10" selected>10</option>
+          <option value="20">20</option>
+        </select>
+      </label>
+    </div>
+
+    <table id="productsTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Image</th>
+          <th>Title <button data-sort="title" class="sort-btn">⇅</button></th>
+          <th>Price <button data-sort="price" class="sort-btn">⇅</button></th>
+          <th>Category</th>
+          <th class="desc-col">Description</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="pagination">
+      <button id="prev">Prev</button>
+      <span id="pages"></span>
+      <button id="next">Next</button>
+    </div>
+  </div>
+
+  <div id="tooltip" class="tooltip" aria-hidden="true"></div>
+
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>
